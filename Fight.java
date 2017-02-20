@@ -4,7 +4,7 @@ public class Fight
 
     public void startFight(GamePiece snake)
     {
-        System.out.println(snake.getFightMessage());
+        System.out.println(snake.writeMessage("fight"));
         rollDice();
     }
 

@@ -15,5 +15,6 @@ public class GameLaunch
         //System.out.println("I'm standing on square " + rabbit.getPosX() + ", " + rabbit.getPosY());
         snake.writeMessage("fight");
         snake.writeMessage("location");
+
     }
 }
