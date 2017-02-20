@@ -49,7 +49,7 @@ public class GamePiece {
         System.out.println(fightMessage);
         }
         else if (message.equals("location")) {
-        System.out.println(locationMessage);
+        System.out.println(this.locationMessage + " " + getPosX() + ", " + getPosY());
         }
     }
     
@@ -72,5 +72,6 @@ public class GamePiece {
     public String getLocationMessage() {
         return this.locationMessage;
     }
+ 
    
 }
