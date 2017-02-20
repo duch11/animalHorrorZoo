@@ -44,10 +44,14 @@ public class GamePiece {
             System.out.println("Invalid input! Restart the game");
         }
     }
-    // public void writeMessage(String newFightMessage, String newLocationMessage) {
-    //    System.out.println(fightMessage);
-    //    System.out.println(locationMessage);
-    //}
+    public void writeMessage(String message) {
+        if (message.equals("fight")) {
+        System.out.println(fightMessage);
+        }
+        else if (message.equals("location")) {
+        System.out.println(locationMessage);
+        }
+    }
     
     public String getName() {
         return this.name;
