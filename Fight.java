@@ -2,9 +2,9 @@ public class Fight
 {
     private boolean firstRoll = true;
 
-    public void startFight()
+    public void startFight(GamePiece snake)
     {
-        System.out.println(snake.getFightMessage);
+        System.out.println(snake.getFightMessage());
         rollDice();
     }
 
