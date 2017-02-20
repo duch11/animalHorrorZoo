@@ -1,39 +1,39 @@
 public class GamePiece {
- private int x;
+    private int x;
     private int y;
-    //private String fightMessage;
-    //private String locationMessage;
+    private String fightMessage;
+    private String locationMessage;
     private String name;
 
-    //public GamePiece(int x, int y, String fightMessage, String locationMessage, String name) {
-    //    this.x = x;
-    //    this.y = y;
-    //    this.fightMessage = fightMessage;
-    //    this.locationMessage = locationMessage;
-    //    this.name = name;
-    //}
-
-    public GamePiece(int x, int y, String name) {
+    public GamePiece(int x, int y, String fightMessage, String locationMessage, String name) {
         this.x = x;
         this.y = y;
+        this.fightMessage = fightMessage;
+        this.locationMessage = locationMessage;
         this.name = name;
     }
 
-    public void move(int newX, int newY) {
+    //public GamePiece(int x, int y, String name) {
+    //    this.x = x;
+    //    this.y = y;
+    //    this.name = name;
+    //}
+
+    public void move(String direction) {
         // move right
-        if (newX == 1 && newY == 0) {
+        if (direction.equals("right") {
             x++;
         }
         // move left
-        else if (newX == -1 && newY == 0) {
+        else if (direction.equals("left") {
             x--;
         }
         // move up
-        else if (newX == 0 && newY == 1) {
+        else if (direction.equals("up")) {
             y++;
         }
         // move down
-        else if (newX == 0 && newY == -1) {
+        else if (direction.equals("down")) {
             y--;
         }  
         else {
