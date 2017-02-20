@@ -12,7 +12,7 @@ public class GameLaunch
         GamePiece rabbit = new GamePiece(4, 5, "I'm scared of the snake.", "I'm standing on square ", "rabbit");
         rabbit.move("up");
         
-        //System.out.println("I'm standing on square " + rabbit.getPosX() + ", " + rabbit.getPosY());
-        snake.writeMessage("fight");
+        //System.out.println("I'm standing on square " + rabbit.getPosX() + ", " + rabbit.getPosY());        
+        snake.writeMessage("fight");        
     }
 }
