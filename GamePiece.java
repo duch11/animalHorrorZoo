@@ -21,20 +21,24 @@ public class GamePiece {
 
     public void move(String direction) {
         // move right
-        if (direction.equals("right") {
+        if (direction.equals("right")) {
             x++;
+            System.out.println("You moved right!");
         }
         // move left
-        else if (direction.equals("left") {
+        else if (direction.equals("left")) {
             x--;
+            System.out.println("You moved left!");
         }
         // move up
         else if (direction.equals("up")) {
             y++;
+            System.out.println("You moved up!");
         }
         // move down
         else if (direction.equals("down")) {
             y--;
+            System.out.println("You moved down!");
         }  
         else {
             System.out.println("Invalid input! Restart the game");
@@ -55,6 +59,14 @@ public class GamePiece {
 
     public int getPosY() {
         return this.y;
+    }
+
+    public String getFightMessage() {
+        return this.fightMessage;
+    }
+
+    public String getLocationMessage() {
+        return this.locationMessage;
     }
    
 }
