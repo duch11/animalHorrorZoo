@@ -65,13 +65,11 @@ public class GamePiece {
         return this.y;
     }
 
-    public String getFightMessage() {
-        return this.fightMessage;
+    public void setPos(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public String getLocationMessage() {
-        return this.locationMessage;
-    }
- 
+    
    
 }
