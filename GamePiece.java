@@ -13,37 +13,9 @@ public class GamePiece {
         this.name = name;
     }
 
-    //public GamePiece(int x, int y, String name) {
-    //    this.x = x;
-    //    this.y = y;
-    //    this.name = name;
-    //}
+   
 
-    public void move(String direction) {
-        // move right
-        if (direction.equals("right")) {
-            x++;
-            System.out.println("You moved right!");
-        }
-        // move left
-        else if (direction.equals("left")) {
-            x--;
-            System.out.println("You moved left!");
-        }
-        // move up
-        else if (direction.equals("up")) {
-            y++;
-            System.out.println("You moved up!");
-        }
-        // move down
-        else if (direction.equals("down")) {
-            y--;
-            System.out.println("You moved down!");
-        }  
-        else {
-            System.out.println("Invalid input! Restart the game");
-        }
-    }
+
     public void writeMessage(String message) {
         if (message.equals("fight")) {
         System.out.println(fightMessage);
