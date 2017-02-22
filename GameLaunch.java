@@ -6,7 +6,6 @@ public class GameLaunch
         snake.move("left");
         Fight newFight = new Fight();
         newFight.startFight(snake);
-        
         //System.out.println("I'm standing on square " + snake.getPosX() + ", " + snake.getPosY());
         
         GamePiece rabbit = new GamePiece(4, 5, "I'm scared of the snake.", "I'm the nice rabbit, I'm standing on square", "rabbit");
@@ -16,5 +15,11 @@ public class GameLaunch
         snake.writeMessage("fight");
         snake.writeMessage("location");
 
+        // GRAFIK KODE TEST ////////////////////////////////////////////////////////////////////// 
+        // 
+        // GfxTest gfx = new GfxTest();
+        // gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
+        // 
+        //////////////////////////////////////////////////////////////////////////////////////////
     }
 }
