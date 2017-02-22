@@ -21,7 +21,10 @@ public class GameBoard
         }
         if (direction.equals("right"))
         {
+           checkProx();
            System.out.println("Moving right"); 
+           piece.setPos(3,3);
+           checkProx();
         }
         if (direction.equals("up"))
         {
