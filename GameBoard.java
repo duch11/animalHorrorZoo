@@ -4,7 +4,8 @@ public class GameBoard
 
    public void move(GamePiece piece, String direction)
    {
-
+        piece.setLocation(1,2);
+        
    } 
 
    private void checkProx()
