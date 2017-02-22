@@ -1,13 +1,13 @@
 public class GameBoard
 {
    private boolean firstFight; 
-   private GamePiece rabbitGb;
-   private GamePiece snakeGb;
+   private GamePiece rabbitGB;
+   private GamePiece snakeGB;
 
    public GameBoard(GamePiece rabbit, GamePiece snake)
    {
-       this.rabbitGb = rabbit;
-       this.snakeGb = snake;
+       this.rabbitGB = rabbit;
+       this.snakeGB = snake;
    }
 
    public void move(GamePiece piece, String direction)
@@ -43,8 +43,14 @@ public class GameBoard
 
    private void checkProx()
    {
-        System.out.println("Her er slangen: " + snakeGb.getPosX() + " " + snakeGb.getPosY() );
-        System.out.println("Her er rabbit: " + rabbitGb.getPosX() + " " + rabbitGb.getPosY() );
+      if (snakeGB.getPosX() == rabbitGB.getPosX() + 1 
+      || snakeGB.getPosX() == rabbitGB.getPosX() - 1
+      || snakeGB.getPosY() == rabbitGB.getPosY() + 1
+      || snakeGB.getPosY() == rabbitGB.getPosY() - 1)
+      {
+         startFight();
+      } 
+
    } 
 
    private void startFight()
