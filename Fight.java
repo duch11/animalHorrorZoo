@@ -10,6 +10,7 @@ public class Fight
 
     private void rollDice()
     {
-
+        
     }
+    
 }

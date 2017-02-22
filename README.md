@@ -6,3 +6,4 @@ Husk at pille nallerne væk fra hinandens filer..
 Jonas laver Fight
 Mathias og Andreas skal enes om GamePiece
 Vi skal arbejde sammen om gamelaunch. 
+
