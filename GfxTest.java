@@ -31,10 +31,13 @@ public class GfxTest
         System.out.flush();  
     }
 
-    public static void writeBoard(int snakeX, int snakeY, int rabbitX, int rabbitY) 
+    public static void writeBoard(int snakeX, int sY, int rabbitX, int rY) 
     {   
         //start med at clear skærm
-        clearScreen();
+        // clearScreen();
+        int snakeY = 11 - sY;
+        int rabbitY = 11 - rY;
+        
 
         if (snakeY == rabbitY) // snake & rabbit on same line
         {
@@ -110,7 +113,13 @@ public class GfxTest
         }
         // structure
         linebreak();
-        
+        System.out.println("Press enter to continue be om guttermand!");
+        try
+        {
+            System.in.read();
+        }  
+        catch(Exception e)
+        {}  
     }  
         
 
