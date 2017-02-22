@@ -13,9 +13,6 @@ public class GamePiece {
         this.name = name;
     }
 
-   
-
-
     public void writeMessage(String message) {
         if (message.equals("fight")) {
         System.out.println(fightMessage);
@@ -41,8 +38,4 @@ public class GamePiece {
         this.x = x;
         this.y = y;
     }
-
-    
-    
-   
 }

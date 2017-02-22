@@ -2,7 +2,17 @@ public class GameLaunch
 {
     public static void main(String[] args)
     {
-        GamePiece snake = new GamePiece(3, 10, "Haha I'm hungry.", "I'm the evil snake, I'm standing on square", "snake");
+        GamePiece snake = new GamePiece(10, 10, "Haha I'm hungry.", "I'm the evil snake, I'm standing on square", "snake");
+        GamePiece rabbit = new GamePiece(1, 1, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square", "rabbit");
+        GameBoard board = new GameBoard();
+
+        board.move(snake, "up");        
+    }
+}
+
+/* TEST KODE ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
         snake.move("left");
         Fight newFight = new Fight();
         newFight.startFight(snake);
@@ -21,6 +31,6 @@ public class GameLaunch
         // gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
         // 
         //////////////////////////////////////////////////////////////////////////////////////////
-    }
-    
-}
+
+
+*/

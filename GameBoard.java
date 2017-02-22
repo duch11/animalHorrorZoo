@@ -4,7 +4,8 @@ public class GameBoard
 
    public void move(GamePiece piece, String direction)
    {
-        piece.setLocation(1,2);
+        piece.setPos(1,2);
+        System.out.println("Hej fra move" + piece.getPosY() );
         
    } 
 
@@ -18,7 +19,7 @@ public class GameBoard
 
    }
 
-   private checkBorder()
+   private void checkBorder()
    {
 
    }
