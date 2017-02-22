@@ -4,7 +4,7 @@ public class GameLaunch
     {
         GamePiece snake = new GamePiece(10, 10, "Haha I'm hungry.", "I'm the evil snake, I'm standing on square", "snake");
         GamePiece rabbit = new GamePiece(5, 5, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square", "rabbit");
-        GameBoard board = new GameBoard();
+        GameBoard board = new GameBoard(rabbit, snake);
 
         board.move(rabbit, "left");        
         board.move(rabbit, "down");        
