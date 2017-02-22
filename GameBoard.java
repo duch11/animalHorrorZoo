@@ -12,24 +12,32 @@ public class GameBoard
 
    public void move(GamePiece piece, String direction)
    {
-        piece.setPos(1,2);
+        
         System.out.println(piece.getPosX() + " " + piece.getPosY() );
         
         if (direction.equals("left"))
         {
-           System.out.println("Moving left"); 
+           piece.setPos(piece.getPosX() - 1, piece.getPosY()); 
+           System.out.println("Moving left");
+           piece.writeMessage("location"); 
         }
         if (direction.equals("right"))
         {
-           System.out.println("Moving right"); 
+           piece.setPos(piece.getPosX() + 1, piece.getPosY()); 
+           System.out.println("Moving right");
+           piece.writeMessage("location"); 
         }
         if (direction.equals("up"))
         {
-           System.out.println("Moving up"); 
+           piece.setPos(piece.getPosX(), piece.getPosY() + 1); 
+           System.out.println("Moving up");
+           piece.writeMessage("location"); 
         }
         if (direction.equals("down"))
         {
-           System.out.println("Moving down"); 
+           piece.setPos(piece.getPosX(), piece.getPosY() - 1); 
+           System.out.println("Moving down");
+           piece.writeMessage("location"); 
         }
    } 
 
