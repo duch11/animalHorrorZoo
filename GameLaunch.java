@@ -3,10 +3,13 @@ public class GameLaunch
     public static void main(String[] args)
     {
         GamePiece snake = new GamePiece(10, 10, "Haha I'm hungry.", "I'm the evil snake, I'm standing on square", "snake");
-        GamePiece rabbit = new GamePiece(1, 1, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square", "rabbit");
+        GamePiece rabbit = new GamePiece(5, 5, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square", "rabbit");
         GameBoard board = new GameBoard();
 
-        board.move(snake, "up");        
+        board.move(rabbit, "left");        
+        board.move(rabbit, "down");        
+        board.move(rabbit, "up");        
+        board.move(rabbit, "right");        
     }
 }
 
