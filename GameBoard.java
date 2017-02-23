@@ -39,7 +39,9 @@ public class GameBoard
            System.out.println("Moving down");
            piece.writeMessage("location"); 
         }
-        checkProx();
+        if (!checkProx()){
+            System.out.println("!! GAME OVER !!");
+        }
    } 
 
    private boolean checkProx()
