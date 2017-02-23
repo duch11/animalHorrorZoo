@@ -46,10 +46,10 @@ public class GameBoard
 
    private boolean checkProx()
    {
-      if (snakeGB.getPosX() == rabbitGB.getPosX() + 1 
-      || snakeGB.getPosX() == rabbitGB.getPosX() - 1
-      || snakeGB.getPosY() == rabbitGB.getPosY() + 1
-      || snakeGB.getPosY() == rabbitGB.getPosY() - 1)
+      if (snakeGB.getPosX() == rabbitGB.getPosX() + 1 && snakeGB.getPosY() == rabbitGB.getPosY() 
+      || snakeGB.getPosX() == rabbitGB.getPosX() - 1 && snakeGB.getPosY() == rabbitGB.getPosY()
+      || snakeGB.getPosY() == rabbitGB.getPosY() + 1 && snakeGB.getPosX() == rabbitGB.getPosX()
+      || snakeGB.getPosY() == rabbitGB.getPosY() - 1 && snakeGB.getPosX() == rabbitGB.getPosX())
       {
          return startFight();
       }
