@@ -20,6 +20,8 @@ public class GameLaunch
         board.move(rabbit, "right");        
 
         gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
+
+        board.move(snake, "right");
         
     }
 }

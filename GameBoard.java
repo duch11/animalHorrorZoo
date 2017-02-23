@@ -15,25 +15,25 @@ public class GameBoard
         
         System.out.println(piece.getPosX() + " " + piece.getPosY() );
         
-        if (direction.equals("left") && checkBorder())
+        if (direction.equals("left") && checkBorder(piece, direction))
         {
            piece.setPos(piece.getPosX() - 1, piece.getPosY()); 
            System.out.println("Moving left");
            piece.writeMessage("location"); 
         }
-        if (direction.equals("right") && checkBorder())
+        if (direction.equals("right") && checkBorder(piece, direction))
         {
            piece.setPos(piece.getPosX() + 1, piece.getPosY()); 
            System.out.println("Moving right");
            piece.writeMessage("location"); 
         }
-        if (direction.equals("up") && checkBorder())
+        if (direction.equals("up") && checkBorder(piece, direction))
         {
            piece.setPos(piece.getPosX(), piece.getPosY() + 1); 
            System.out.println("Moving up");
            piece.writeMessage("location"); 
         }
-        if (direction.equals("down") && checkBorder())
+        if (direction.equals("down") && checkBorder(piece, direction))
         {
            piece.setPos(piece.getPosX(), piece.getPosY() - 1); 
            System.out.println("Moving down");
@@ -58,16 +58,12 @@ public class GameBoard
 
    }
 
-   private boolean checkBorder()
+   private boolean checkBorder(GamePiece piece, String direction)
    {
-       if (rabbitGB.getPosX() + 1 > 10 ||  
-           rabbitGB.getPosX() - 1 < 1  || 
-           rabbitGB.getPosY() + 1 > 10 || 
-           rabbitGB.getPosY() - 1 < 1  ||
-           snakeGB.getPosX()  + 1 > 10 ||  
-           snakeGB.getPosX()  - 1 < 1  || 
-           snakeGB.getPosY() + 1  > 10 || 
-           snakeGB.getPosY() - 1  < 1)
+       if (direction.equals("right") && piece.getPosX() + 1 > 10 ||  
+           direction.equals("left") && piece.getPosX() - 1 < 1  || 
+           direction.equals("up") && piece.getPosY() + 1 > 10 || 
+           direction.equals("down") && piece.getPosY() - 1 < 1)
        {
            System.out.println("You have hit a wall.");
            return false;
