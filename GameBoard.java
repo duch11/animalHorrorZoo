@@ -72,10 +72,7 @@ public class GameBoard
            System.out.println("You have hit a wall.");
            return false;
        }
-       
-       else {
-           return true;
-       }
+        return true;
 
    }
 }
