@@ -35,6 +35,8 @@ public class GfxTest
     {   
         //start med at clear skærm
         // clearScreen();
+
+        //convertering af Y
         int snakeY = 11 - sY;
         int rabbitY = 11 - rY;
         
@@ -158,7 +160,7 @@ public class GfxTest
     //print rabbit  
     private static void rabbit()
     {
-        System.out.print("BU");
+        System.out.print("RB");
     }
 
     //print snake
