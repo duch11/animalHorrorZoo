@@ -113,7 +113,7 @@ public class GfxTest
         }
         // structure
         linebreak();
-        System.out.println("Press enter to continue be om guttermand!");
+        System.out.println("Press enter to continue");
         try
         {
             System.in.read();
