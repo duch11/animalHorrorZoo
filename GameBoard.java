@@ -41,21 +41,27 @@ public class GameBoard
         }
    } 
 
-   private void checkProx()
+   private boolean checkProx()
    {
       if (snakeGB.getPosX() == rabbitGB.getPosX() + 1 
       || snakeGB.getPosX() == rabbitGB.getPosX() - 1
       || snakeGB.getPosY() == rabbitGB.getPosY() + 1
       || snakeGB.getPosY() == rabbitGB.getPosY() - 1)
       {
-         startFight();
-      } 
+         return startFight();
+      }
+      return true; 
 
    } 
 
-   private void startFight()
+   private boolean startFight()
    {
-
+    if (firstFight == true) { 
+    System.out.println("The snake initiates a fight with the rabbit, but the rabbit escapes!");
+    return true;
+    }
+    System.out.println("The snake eats the rabbit!");
+    return false; 
    }
 
    private boolean checkBorder(GamePiece piece, String direction)
