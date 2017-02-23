@@ -119,7 +119,9 @@ public class GfxTest
             System.in.read();
         }  
         catch(Exception e)
-        {}  
+        {
+            e.printStackTrace();
+        }  
     }  
         
 
