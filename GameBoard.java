@@ -1,6 +1,6 @@
 public class GameBoard
 {
-   private boolean firstFight; 
+   private boolean firstFight = true; 
    private GamePiece rabbitGB;
    private GamePiece snakeGB;
 
@@ -39,6 +39,7 @@ public class GameBoard
            System.out.println("Moving down");
            piece.writeMessage("location"); 
         }
+        checkProx();
    } 
 
    private boolean checkProx()
@@ -56,7 +57,8 @@ public class GameBoard
 
    private boolean startFight()
    {
-    if (firstFight == true) { 
+    if (firstFight == true) {
+    firstFight = false;
     System.out.println("The snake initiates a fight with the rabbit, but the rabbit escapes!");
     return true;
     }

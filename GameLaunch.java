@@ -2,25 +2,19 @@ public class GameLaunch
 {
     public static void main(String[] args)
     {
-        GamePiece snake = new GamePiece(10, 10, "Haha I'm hungry.", "I'm the evil snake, I'm standing on square", "snake");
-        GamePiece rabbit = new GamePiece(5, 5, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square", "rabbit");
+        GamePiece snake = new GamePiece(3, 10, "Haha I'm hungry.", "I'm the evil snake, I'm standing on square", "snake");
+        GamePiece rabbit = new GamePiece(1, 3, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square", "rabbit");
         GameBoard board = new GameBoard(rabbit, snake);
         GfxTest gfx = new GfxTest();
         gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
-        
-        board.move(rabbit, "left");        
+        board.move(snake, "down");
+        gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
+
+        board.move(rabbit, "down");
+        gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
+        board.move(snake, "down");
         gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
         
-        board.move(rabbit, "down");        
-
-        gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
-        board.move(rabbit, "up");        
-
-        gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
-        board.move(rabbit, "right");        
-
-        gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
-
         // System.out.println("You have won the game... Congratulations!");
     }
 }
