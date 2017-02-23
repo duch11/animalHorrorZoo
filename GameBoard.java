@@ -39,15 +39,17 @@ public class GameBoard
            System.out.println("Moving down");
            piece.writeMessage("location"); 
         }
-        checkProx();
+        if (!checkProx()){
+            System.out.println("!! GAME OVER !!");
+        }
    } 
 
    private boolean checkProx()
    {
-      if (snakeGB.getPosX() == rabbitGB.getPosX() + 1 
-      || snakeGB.getPosX() == rabbitGB.getPosX() - 1
-      || snakeGB.getPosY() == rabbitGB.getPosY() + 1
-      || snakeGB.getPosY() == rabbitGB.getPosY() - 1)
+      if (snakeGB.getPosX() == rabbitGB.getPosX() + 1 && snakeGB.getPosY() == rabbitGB.getPosY() 
+      || snakeGB.getPosX() == rabbitGB.getPosX() - 1 && snakeGB.getPosY() == rabbitGB.getPosY()
+      || snakeGB.getPosY() == rabbitGB.getPosY() + 1 && snakeGB.getPosX() == rabbitGB.getPosX()
+      || snakeGB.getPosY() == rabbitGB.getPosY() - 1 && snakeGB.getPosX() == rabbitGB.getPosX())
       {
          return startFight();
       }
