@@ -15,25 +15,25 @@ public class GameBoard
         
         System.out.println(piece.getPosX() + " " + piece.getPosY() );
         
-        if (direction.equals("left"))
+        if (direction.equals("left") && checkBorder())
         {
            piece.setPos(piece.getPosX() - 1, piece.getPosY()); 
            System.out.println("Moving left");
            piece.writeMessage("location"); 
         }
-        if (direction.equals("right"))
+        if (direction.equals("right") && checkBorder())
         {
            piece.setPos(piece.getPosX() + 1, piece.getPosY()); 
            System.out.println("Moving right");
            piece.writeMessage("location"); 
         }
-        if (direction.equals("up"))
+        if (direction.equals("up") && checkBorder())
         {
            piece.setPos(piece.getPosX(), piece.getPosY() + 1); 
            System.out.println("Moving up");
            piece.writeMessage("location"); 
         }
-        if (direction.equals("down"))
+        if (direction.equals("down") && checkBorder())
         {
            piece.setPos(piece.getPosX(), piece.getPosY() - 1); 
            System.out.println("Moving down");
