@@ -58,8 +58,24 @@ public class GameBoard
 
    }
 
-   private void checkBorder()
+   private boolean checkBorder()
    {
+       if (rabbitGB.getPosX() + 1 > 10 ||  
+           rabbitGB.getPosX() - 1 < 1  || 
+           rabbitGB.getPosY() + 1 > 10 || 
+           rabbitGB.getPosY() - 1 < 1  ||
+           snakeGB.getPosX()  + 1 > 10 ||  
+           snakeGB.getPosX()  - 1 < 1  || 
+           snakeGB.getPosY() + 1  > 10 || 
+           snakeGB.getPosY() - 1  < 1)
+       {
+           System.out.println("You have hit a wall.");
+           return false;
+       }
+       
+       else {
+           return true;
+       }
 
    }
 }
