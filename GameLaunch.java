@@ -2,8 +2,8 @@ public class GameLaunch
 {
     public static void main(String[] args)
     {
-        GamePiece snake = new GamePiece(3, 10, "Haha I'm hungry.", "I'm the evil snake, I'm standing on square", "snake");
-        GamePiece rabbit = new GamePiece(1, 3, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square", "rabbit");
+        GamePiece snake = new GamePiece(3, 10, "Haha I'm hungry.", "I'm the evil snake, I'm standing on square");
+        GamePiece rabbit = new GamePiece(1, 3, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square");
         GameBoard board = new GameBoard(rabbit, snake);
         GfxTest gfx = new GfxTest();
         gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());

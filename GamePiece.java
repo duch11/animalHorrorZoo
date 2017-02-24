@@ -3,14 +3,12 @@ public class GamePiece {
     private int y;
     private String fightMessage;
     private String locationMessage;
-    private String name;
 
-    public GamePiece(int x, int y, String fightMessage, String locationMessage, String name) {
+    public GamePiece(int x, int y, String fightMessage, String locationMessage) {
         this.x = x;
         this.y = y;
         this.fightMessage = fightMessage;
         this.locationMessage = locationMessage;
-        this.name = name;
     }
 
     public void writeMessage(String message) {
@@ -22,10 +20,6 @@ public class GamePiece {
         }
     }
     
-    public String getName() {
-        return this.name;
-    }
-
     public int getPosX() {
        return this.x;
     }
