@@ -13,7 +13,8 @@ public class GameBoard
    public void move(GamePiece piece, String direction)
    {
         
-        System.out.println(piece.getPosX() + " " + piece.getPosY() );
+        //System.out.println("(" + piece.getPosX() + ", " + piece.getPosY() + ")");
+        piece.writeMessage("location"); 
         
         if (direction.equals("left") && checkBorder(piece, direction))
         {

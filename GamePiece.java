@@ -16,7 +16,7 @@ public class GamePiece {
         System.out.println(fightMessage);
         }
         else if (message.equals("location")) {
-        System.out.println(this.locationMessage + " " + getPosX() + ", " + getPosY());
+        System.out.println(this.locationMessage + "(" + getPosX() + ", " + getPosY() + ")");
         }
     }
     
