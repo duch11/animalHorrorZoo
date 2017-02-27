@@ -6,6 +6,13 @@ public class GameLaunch
         GamePiece rabbit = new GamePiece(1, 3, "Oh no don't eat me!!'", "I'm the rabbit, I'm standing on square");
         GameBoard board = new GameBoard(rabbit, snake);
         GfxTest gfx = new GfxTest();
+        for (int i = 0; i < 5; i++){
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        }
         gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
         board.move(snake, "down");
         gfx.writeBoard(snake.getPosX(), snake.getPosY(), rabbit.getPosX(), rabbit.getPosY());
